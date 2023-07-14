@@ -5,8 +5,8 @@ const bodyParser = require("body-parser")
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.get("./", function(req, res){
-  res.sendFile(__dirname + "./calculator.html");
+app.get("/", function(req, res){
+  res.sendFile(__dirname + "/calculator.html");
 });
 
 app.post("/", function(req, res){
