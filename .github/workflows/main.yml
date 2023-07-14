@@ -15,6 +15,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: "https://api.render.com/deploy/srv-cioegrlph6elhbsdhga0?key=tbyVL7SpScg"
+          webhook_secret: "tbyVL7SpScg"
+
       - uses: bounceapp/render-action@0.6.0
         with:
           render-token: ${{secrets.BMI}} #RENDER_API_KEY
