@@ -8,10 +8,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('./'))
 
-app.listen(3000, function() {
-    console.log("server is running on port ${port}.");
-});
-
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/calculator.html");
 })
@@ -34,3 +30,7 @@ app.post("/", function(req, res) {
     }
    
 })
+
+app.listen(3000, function() {
+  console.log("server is running on port ${port}.");
+});
