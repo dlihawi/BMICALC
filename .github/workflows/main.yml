@@ -25,7 +25,7 @@ jobs:
         with:
           render-token: ${{secrets.BMI}} #RENDER_API_KEY
           github-token: ${{secrets.ACC_API_KEY}} #This is the github token
-          service-id: "srv-cioegrlph6elhbsdhga0" #this is unique for each app
+          service-id: "srv-cioegrlph6elhbsdhga0" #this id is unique for each app
           retries: 20
           wait: 16000
           sleep: 30000
